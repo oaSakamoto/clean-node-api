@@ -1,7 +1,5 @@
-import { type AccountModel } from '../../domain/models/account'
-import { type AddAccountModel, type AddAccount } from '../../domain/use-cases/add-account'
-import { InvalidParamError, MissingParamError, ServerError } from '../errors'
-import { type EmailValidator } from '../protocols'
+import { InvalidParamError, MissingParamError, ServerError } from '../../errors'
+import { type AddAccount, type AddAccountModel, type AccountModel, type EmailValidator } from './signup-protocols'
 import { SignUpController } from './signup'
 
 const makeEmailValidator = (): EmailValidator => {
